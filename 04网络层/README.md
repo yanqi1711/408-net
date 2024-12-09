@@ -19,8 +19,8 @@
 
 ---
 
-## IPV4
-### IPV4分组
+## IPv4
+### IPv4分组
 IP数据报（IP分组）的格式：
 <p align="center"><img src="./img/IP分组格式.png" style="width:70%!important"></p>
 `首部长度以4B为单位`，最大为60B<br>
@@ -92,7 +92,7 @@ IP数据报分片：
 
 总结：
 1. 主机发送IP数据报的过程：
-<p align="center"><img src="./img/主机发送IP数据报.png" style="width:70%!important"></p>
+<p id="a" align="center"><img src="./img/主机发送IP数据报.png" style="width:70%!important"></p>
 
 2. 路由器转发IP数据报的过程
 <p align="center"><img src="./img/路由器转发IP数据报.png" style="width:70%!important"></p>
@@ -108,3 +108,90 @@ IP数据报分片：
 <p align="center"><img src="./img/变长子网划分.png" style="width:70%!important"></p>
 
 ### 路由聚合
+路由聚合：
+<p align="center"><img src="./img/路由聚合.png" style="width:70%!important"></p>
+tips：如果在路由表中查找到的接口与数据帧发来的接口一致就不需要转发了，直接丢弃<br>
+路由聚合的作用：减少路由表中的路由项，减少路由表所占用的空间，加快路由表查询速度<br>
+使用路由聚合可能引入无效的地址，但并影响网络系统正常工作，但会带来第二个问题：可能使多个表项可匹配该地址，需要根据`最长前缀匹配原则`选择表项<br>
+<p align="center"><img src="./img/最长前缀匹配原则.png" style="width:70%!important"></p>
+采用`CIDR技术`和`路由聚合`后，主机发送IP数据报过程与<a href="#a">上面</a>相同<br>
+而路由器转发一个IP数据报的过程为：
+<p align="center"><img src="./img/查转发表.png" style="width:70%!important"></p>
+
+### 网络地址转换NAT
+网络层实现了`主机到主机`的通信。即网络层在IP数据报的首部，指明源主机和目的主机的IP地址<br>
+传输层实现了`端到端`（进程到进程）的通信。即传输层在TCP（或UDP）报文段的首部，指明`源端口号和目的端口号`<br>
+如何缓解IP地址不够用的问题？<br>
+局域网共享一个公网IP地址，局域网内的主机通过`NAT`技术访问互联网<br>
+NAT原理示意图：
+<p align="center"><img src="./img/NAT原理.png" style="width:70%!important"></p>
+总结要点：
+<p align="center"><img src="./img/NAT.png" style="width:70%!important"></p>
+
+### 地址解析协议ARP
+训练：
+<p align="center"><img src="./img/ARP训练.png" style="width:70%!important"></p>
+ARP协议：
+<p align="center"><img src="./img/ARP.png" style="width:70%!important"></p>
+
+### 动态主机配置协议DHCP
+DHCP是应用层协议，基于UDP，客户端口号68，服务器端口67<br>
+在一个大型网络内运行多台DHCP服务器，但他们管理各自的IP地址池，客户端从任意一个DHCP服务器获取IP地址<br>
+家用路由器兼职DHCP服务器，为局域网内的主机分配IP地址<br>
+记住发现报文、提供报文、请求报文、确认报文的细节：
+<p align="center"><img src="./img/DHCP.png" style="width:70%!important"></p>
+
+**⚠️一些概念和错题知识点整理**<br>
+- 把IP网络`划分成子网`，这样做的好处是`减少广播域的大小`
+- `CIDR技术的作用是把小的网络汇聚成大的子网`
+- NAT的表项需要管理员添加，收到`NAT表项中没有的分组直接丢弃`
+- `ICMP报文`的传输方式是放在IP数据报的`数据字段`中传送
+
+---
+
+## IPv6（没出过题）
+IPv6数据报格式：
+<p align="center"><img src="./img/IPv6数据报格式.png" style="width:70%!important"></p>
+注意红字就行了，其他了解：
+<p align="center"><img src="./img/v4v6.png" style="width:70%!important"></p>
+表示形式：
+<p align="center"><img src="./img/IPv6表示形式.png" style="width:70%!important"></p>
+IPv6基本地址类型：单播（一对一通信）、多播（一对多通信）、任播（一对多中的一个通信）<br>
+过渡策略：双协议栈（同时开启v4和v6）、隧道技术（v6路由器 - v4路由器 - 互联网/xx - v4路由器 - v6路由器）<br>
+
+---
+
+## 路由算法和路由协议
+直播P3
+
+---
+
+## IP组播
+IP数据报三种传输方式：单播、组播（多播）、广播<br>
+IP组播地址：
+<p align="center"><img src="./img/IP组播地址.png" style="width:70%!important"></p>
+硬件组播：
+<p align="center"><img src="./img/硬件组播.png" style="width:70%!important"></p>
+IGMP协议：1GMP只让连接到本地局域网上的组播路由器知道局域网上是否有主机参加或退出了某个组播组<br>
+组播路由选择协议常用的三种算法：距离-向量路由选择算法、链路状态路由选择算法、协议无关组播（稀疏/密集）<br>
+
+---
+
+## 移动IP（没出过题）
+移动IP概念：
+<p align="center"><img src="./img/移动IP.png" style="width:70%!important"></p>
+通信过程：
+<p align="center"><img src="./img/移动IP通信过程.png" style="width:70%!important"></p>
+
+**⚠️一些概念和错题知识点整理**<br>
+- 移动IP为移动主机设置了两个IP地址，即主地址和辅地址（不同网段）
+- 主机到了一个不属于他的网络中，所有的通信都要通过外部代理
+
+---
+
+## 网络层设备
+<p align="center"><img src="./img/网络层设备.png" style="width:70%!important"></p>
+
+**⚠️一些概念和错题知识点整理**<br>
+- 如果一个存储转发设备实现了某个层次的功能，那么它就可以互联两个在该层次上使用不同协议的网段
+- 分组转发直接查找转发表而不是路由表
