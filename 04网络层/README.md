@@ -88,6 +88,7 @@ IP数据报分片：
 <p align="center"><img src="./img/不同子网下.png" style="width:70%!important"></p>
 如果是主机给互联网发送数据报，使用默认路由0.0.0.0，一定可以匹配上
 <p align="center"><img src="./img/主机给互联网.png" style="width:70%!important"></p>
+200.1.1.2/24就是指地址为200.1.1.2，子网掩码为255.255.255.0的IP地址<br>
 
 总结：
 1. 主机发送IP数据报的过程：
@@ -95,3 +96,15 @@ IP数据报分片：
 
 2. 路由器转发IP数据报的过程
 <p align="center"><img src="./img/路由器转发IP数据报.png" style="width:70%!important"></p>
+
+### 无分类编址CIDR⭐️⭐️⭐️
+<p align="center"><img src="./img/CIDR总结.png" style="width:70%!important"></p>
+无分类编址CIDR（Classless Inter-Domain Routing）、变长子网划分的应用<br>
+<p align="center"><img src="./img/CIDR.png" style="width:70%!important"></p>
+<p align="center"><img src="./img/CIDR2.png" style="width:70%!important"></p>
+定长子网划分例题：
+<p align="center"><img src="./img/定长子网划分.png" style="width:70%!important"></p>
+变长子网划分例题：
+<p align="center"><img src="./img/变长子网划分.png" style="width:70%!important"></p>
+
+### 路由聚合
