@@ -166,7 +166,7 @@ AP（Access Point）：接入点，即WiFi热点<br>
 <p align="center"><img src="./img/CSMACA3.png" style="width:70%!important"></p>
 
 ### 轮询介质访问控制
-`令牌传递协议`：（过时）
+`令牌传递协议`：（过时，802.5）
 <p align="center"><img src="./img/令牌传递协议.png" style="width:70%!important"></p>
 再补充：令牌节点编号唯一<br>
 
@@ -196,7 +196,7 @@ IEEE802 -> 电气电子工程师学会的局域网标准 -> 802.3（以太网技
 
 ### 以太网与802.3
 V2标准的以太网MAC帧（收发协数验，FCS指帧检验序列）：
-<p align="center"><img src="./img/以太网MAC帧.png" style="width:70%!important"></p>
+<p align="center"><img src="./img/以太网mac帧.png" style="width:70%!important"></p>
 单播帧、广播帧如何传播：
 <p align="center"><img src="./img/单播帧与广播帧.png" style="width:70%!important"></p>
 例题：
