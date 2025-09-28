@@ -29,7 +29,7 @@
 ### 纠错编码（海明码）
 <p align="center"><img src="./img/海明码.png" style="width:70%!important"></p>
 分组偶校验的由来：每一个校验位都代表所有信息位每一位分组的权重：
-<p align="center"><img src="./img/分组偶校验.png" style="width:70%!important"></p>
+<p align="center"><img src="./img/海明码求校验位.png" style="width:70%!important"></p>
 纠错（S由下标从大到小排序做成的数字为出错的海明码位）
 <p align="center"><img src="./img/纠错.png" style="width:70%!important"></p>
 信息位由下标从大到小或从小到大排序的不同做法：
