@@ -227,3 +227,21 @@ IGMP协议：1GMP只让连接到本地局域网上的组播路由器知道局域
 RIP属于应用层协议，基于UDP，端口号520<br>
 RIP的规定
 <p align="center"><img src="./img/RIP的规定.png" style="width:70%!important"></p>
+运行RIP协议的路由器是如何交换信息的
+<p align="center"><img src="./img/RIP交换信息.png" style="width:70%!important"></p>
+
+### RIP的工作示例（从启动到收敛）
+<p align="center"><img src="./img/RIP工作过程.png" style="width:70%!important"></p>
+0时刻
+<p align="center"><img src="./img/RIP工作过程0时刻.png" style="width:70%!important"></p>
+30时刻
+<p align="center"><img src="./img/RIP工作过程30时刻.png" style="width:70%!important"></p>
+60时刻
+<p align="center"><img src="./img/RIP工作过程60时刻.png" style="width:70%!important"></p>
+
+### RIP的工作示例（动态适应网络拓扑变化）
+100秒时新增R1-R4链路
+<p align="center"><img src="./img/RIP动态适应.png" style="width:70%!important"></p>
+
+### RIP的优缺点
+<p align="center"><img src="./img/RIP的优缺点.png" style="width:70%!important"></p>
