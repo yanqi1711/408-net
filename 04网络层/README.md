@@ -195,3 +195,20 @@ IGMP协议：1GMP只让连接到本地局域网上的组播路由器知道局域
 **⚠️一些概念和错题知识点整理**<br>
 - 如果一个存储转发设备实现了某个层次的功能，那么它就可以互联两个在该层次上使用不同协议的网段
 - 分组转发直接查找转发表而不是路由表
+
+---
+
+## 路由算法
+<p align="center"><img src="./img/路由算法知识总览.png" style="width:70%!important"></p>
+
+路由算法和路由协议之间的关系
+<p align="center"><img src="./img/路由协议与路由算法的关系.png" style="width:70%!important"></p>
+路由协议会制定一种规则，度量路由器、网络间的"权值（代价）"
+当一台路由器转发IP数据报时，本质就是找到路由器到达目的网络的"最短路径"
+
+路由算法的分类
+<p align="center"><img src="./img/路由算法的分类.png" style="width:70%!important"></p>
+距离向量路由算法考研真题：
+<p align="center"><img src="./img/距离向量路由算法考研真题.png" style="width:70%!important"></p>
+总结：
+<p align="center"><img src="./img/路由算法总结.png" style="width:70%!important"></p>
