@@ -203,7 +203,7 @@ IGMP协议：1GMP只让连接到本地局域网上的组播路由器知道局域
 
 路由算法和路由协议之间的关系
 <p align="center"><img src="./img/路由协议与路由算法的关系.png" style="width:70%!important"></p>
-路由协议会制定一种规则，度量路由器、网络间的"权值（代价）"
+路由协议会制定一种规则，度量路由器、网络间的"权值（代价）"<br>
 当一台路由器转发IP数据报时，本质就是找到路由器到达目的网络的"最短路径"
 
 路由算法的分类
@@ -212,3 +212,18 @@ IGMP协议：1GMP只让连接到本地局域网上的组播路由器知道局域
 <p align="center"><img src="./img/距离向量路由算法考研真题.png" style="width:70%!important"></p>
 总结：
 <p align="center"><img src="./img/路由算法总结.png" style="width:70%!important"></p>
+
+---
+
+## 分层次的路由协议
+全世界数以亿计的路由器和网络，不肯能让每个路由器都了解所有网络信息所以需要分层次的路由协议
+<p align="center"><img src="./img/分层次的路由协议.png" style="width:70%!important"></p>
+- 内部只知道“自治系统内部的详细路由”
+- 外部只知道“自治系统的整体路径”，不必知道内部细节
+
+---
+
+## RIP协议(routing information protocol)
+RIP属于应用层协议，基于UDP，端口号520<br>
+RIP的规定
+<p align="center"><img src="./img/RIP的规定.png" style="width:70%!important"></p>
