@@ -223,7 +223,7 @@ IGMP协议：1GMP只让连接到本地局域网上的组播路由器知道局域
 
 ---
 
-## RIP协议(routing information protocol)
+## RIP协议(routing information protocol, 路由信息协议)
 RIP属于应用层协议，基于UDP，端口号520<br>
 RIP的规定
 <p align="center"><img src="./img/RIP的规定.png" style="width:70%!important"></p>
@@ -245,3 +245,24 @@ RIP的规定
 
 ### RIP的优缺点
 <p align="center"><img src="./img/RIP的优缺点.png" style="width:70%!important"></p>
+
+---
+
+## OSPF协议(open shortest path first, 开放最短路径优先)
+OSPF在协议栈中所处的位置
+<p align="center"><img src="./img/OSPF位置.png" style="width:70%!important"></p>
+
+### OSPF协议的特点
+<p align="center"><img src="./img/OSPF特点.png" style="width:70%!important"></p>
+
+### OSPF工作原理
+<p align="center"><img src="./img/OSPF工作原理.png" style="width:70%!important"></p>
+几个混淆术语LSDB、LSA、LSI
+<p align="center"><img src="./img/LSDB.png" style="width:70%!important"></p>
+- LSI(Link State Information)：链路状态信息，指链路的状态和代价，广义的概念，指一切描述链路状态的信息
+- LSA(Link State Advertisement)：链路状态通告，指路由器之间交换，即该路由器自身探测到的链路信息（逻辑上是一个链表）
+- LSDB(Link State Database)：链路状态数据库，指路由器存储的所有路由器的链路信息
+
+### OSPF分组类型
+5种分组类型
+<p align="center"><img src="./img/OSPF分组类型.png" style="width:70%!important"></p>
