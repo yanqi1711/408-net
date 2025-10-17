@@ -139,6 +139,7 @@ SW例题：
 `CSMA/CD协议`（冲突检测）：⭐️⭐️⭐️
 <p align="center"><img src="./img/CSMACD.png" style="width:70%!important"></p>
 <p align="center"><img src="./img/CSMACD2.png" style="width:70%!important"></p>
+
 截断二进制指数退避算法中的`争用期` = 2 x 最大单向传播时延（考虑最远的两个节点）<br>
 意思是这个节点在争用期后一定不可能再发生冲突，另一层意思是节点最多需要的时间（即争用期）使其一定可以在此期间检测到冲突<br>
 
