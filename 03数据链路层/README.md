@@ -212,7 +212,7 @@ V2标准的以太网MAC帧（收发协数验，FCS指帧检验序列）：
 802.11帧：
 - 30 N 4首数验，首部3+1地址
 - 九十比特表去来，帧的中转靠AP
-- 去往AP中起止，来自AP止起中
+- 去往AP中起止，来自AP止中起（下图错了，按照这个文字的背诵，一收二发三其他）
 <p align="center"><img src="./img/802.11帧.png" style="width:70%!important"></p>
 例题：
 <p align="center"><img src="./img/中起止.png" style="width:70%!important"></p>
