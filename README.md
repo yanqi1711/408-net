@@ -1,4 +1,4 @@
-## 操作系统学习记录
+## 计算机网络学习记录
 
 <img src="./public/FxemojiThreenetworkedcomputers.png" width="50px"/>
 
